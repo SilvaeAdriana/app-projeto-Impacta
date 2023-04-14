@@ -1,0 +1,36 @@
+<div id="container">
+    <div id="container-produto">
+        <div id="usuario">Olá, {{ usuario }}</div>
+        <input
+            name="pesquisa"
+            placeholder="Busque algum produto aqui =D"
+            [(ngModel)]='nomeProduto'
+            (keyup)='findByNomeProduto()'/>
+        <div id="card-produto">
+            <div id="content-produto">
+                <div id="area-produto">
+                    <div id="produto" *ngFor='let produto of listaProdutos'>
+                        <div class="atributo-produto">
+                            <b>Nome: </b>
+                            {{ produto.nome }}
+                        </div>
+                        <div class="atributo-produto">
+                            <b>Categoria: </b>
+                            {{ produto.categoria }}
+                        </div>
+                        <div class="atributo-produto">
+                            <b>Resumo: </b>
+                            {{ produto.resumo }}
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="content-button">
+                    <button routerLink="/login">Sair</button>
+                    <button routerLink="/cadastro-produto">Add Produto</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div id="container">
+    <div id="container-cadastro-produto">
+        <div id="card-cadastro-produto">
+            <div id="content-cadastro-produto">
+                <p id="titulo-cadastro-produto">Cadastro de produto: </p>
+                <label for="nome">Nome: </label>
+                <input [(ngModel)]='produto.nome' name="nome"/>
+                <label for="usuario">Categoria: </label>
+                <input [(ngModel)]='produto.categoria' name="categoria"/>
+                <label for="resumo">Resumo: </label>
+                <textarea 
+                [(ngModel)]='produto.resumo'
+                name="resumo"
+                placeholder="Digite aqui um resumo sobre o seu produto!"
+                rows="5"
+                >
+                </textarea>
+                <div id="content-button">
+                    <button routerLink="/feed-produtos">Voltar</button>
+                    <button (click)="cadastrar()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+

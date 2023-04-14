@@ -1,0 +1,79 @@
+#container {
+    display: flex;
+    background-color: yellow !important;
+    height: 100%;
+}
+
+#container-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
+input {
+    height: 30px;
+    width: 450px;
+    margin-bottom: 20px
+}
+
+button {
+    width: 150px;
+    height: 40px;
+}
+
+#usuario {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#content-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+
+#card-produto {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;      
+}
+
+.atributo-produto {
+    padding: 2% 0;
+    word-wrap: break-word;
+}
+
+#produto {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: rgb(212, 205, 205);
+    padding: 5% 10%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#area-produto {
+    display: table-row;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x:hidden;
+
+}
+
+#content-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 10%;
+    height: 500px;
+   /* border: black solid 1px;*/
+}

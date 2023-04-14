@@ -1,0 +1,23 @@
+{
+  "name": "api-adriana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "configure": "./src/bin/configuredb.sh",
+    "start": "node ./src/bin/www",
+    "dev": "nodemon ./src/bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  }
+}

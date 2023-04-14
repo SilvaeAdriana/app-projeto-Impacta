@@ -1,0 +1,60 @@
+#container {
+    display: flex;
+    background-color: yellow !important;
+    height: 100%;
+}
+
+#container-cadastro-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+select {
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+input {
+    height: 30px;
+    margin-bottom: 20px
+}
+
+button {
+    width: 150px;
+    height: 40px;
+}
+
+#content-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%
+}
+
+#card-cadastro-usuario {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;      
+}
+
+#content-cadastro-usuario {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+}
+
+#titulo-cadastro-usuario {
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+}

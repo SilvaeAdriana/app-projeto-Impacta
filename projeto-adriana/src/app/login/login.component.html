@@ -1,0 +1,20 @@
+<div id="container">
+    <div id="container-login">
+        <div id="card-login">
+            <div id="content-login">
+                <p id="titulo-login">Faça o seu login para prosseguir: </p>
+                <label for="usuario">Usuário: </label>
+                <input [(ngModel)]="usuario.usuario" name="usuario"/>
+                <label for="senha">Senha: </label>
+                <input type="password" [(ngModel)]="usuario.senha" name="senha"/>
+                <div id="content-button">
+                    <button (click)="entrar()">Entrar</button>
+                </div>
+                <div id="atalho-cadastro">
+                    <p>Ainda não possui cadastro?<a routerLink="/cadastro-usuario"> Clique aqui!</a></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>

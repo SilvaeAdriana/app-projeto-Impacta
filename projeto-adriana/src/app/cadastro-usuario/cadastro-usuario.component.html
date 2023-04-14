@@ -1,0 +1,32 @@
+<div id="container">
+    <div id="container-cadastro-usuario">
+        <div id="card-cadastro-usuario">
+            <div id="content-cadastro-usuario">
+                <p id="titulo-cadastro-usuario">Cadastro: </p>
+                <label for="nome">Nome: </label>
+                <input [(ngModel)]='usuario.nome' name="nome"/>
+                <label for="usuario">Usuário: </label>
+                <input [(ngModel)]='usuario.usuario' name="usuario"/>
+                <label for="email">E-mail: </label>
+                <input [(ngModel)]='usuario.email' name="email"/>
+                <label for="endereco">Endereço: </label>
+                <input [(ngModel)]='usuario.endereco' name="endereco"/>
+                <label for="senha">Senha: </label>
+                <input  type="password" (input)="confirmSenha($event)" name="senha"/>
+                <label for="senha">Confirmar senha: </label>
+                <input type="password" [(ngModel)]='usuario.senha' name="confirmarSenha"/>
+                <label for="tipo">Tipo de usuário: </label>
+                <select name="tipo" id="tipo" (change)='tipoUser($event)'>
+                    <option> Selecione o tipo do usuário</option>
+                    <option value="Doador">Doador</option>
+                    <option value="Recebedor">Recebedor</option>
+                    <option value="Super usuário">Super usuário</option>
+                </select>
+                <div id="content-button">
+                    <button routerLink="/login">Voltar</button>
+                    <button (click)="cadastrar()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>

@@ -1,0 +1,61 @@
+#container {
+    display: flex;
+    background-color: yellow !important;
+    height: 100%;
+}
+
+#container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+input {
+    height: 30px;
+    margin-bottom: 20px
+}
+
+button {
+    width: 150px;
+    height: 40px;
+}
+
+#content-button {
+    display: flex;
+    justify-content: center;
+}
+
+#card-login {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;      
+}
+
+#content-login {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+}
+
+#titulo-login {
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+}
+
+#atalho-cadastro {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
