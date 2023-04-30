@@ -1,7 +1,15 @@
 const pool = require('../db');
 
 exports.getAllProdutos = (request, response, next) => {
-    pool.query('SELECT * FROM produtos ORDER BY id ASC', (err, res) => {
+    pool.query(
+            `SELECT 
+                produtos.id as id,
+                produtos.nome as nome,
+                categoria,
+                resumo,
+                usuario_id,
+                usuario,
+                usuarios.tipo as tipo_usuario FROM produtos inner join usuarios on usuarios.id = produtos.usuario_id`, (err, res) => {
         if (err) return next(err);
 
         response.json(res.rows);
