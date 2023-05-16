@@ -24,7 +24,7 @@ exports.loginUsuario = async (req, res, next) => {
 
     try {
         const query = `SELECT * FROM usuarios WHERE usuario = $1`;
-        var results = await pool.query(query, [ usuario]);
+        var results = await pool.query(query, [usuario]);
 
         if (results.length < 1) {
             return res.status(401).send({message: 'Falha na autenticação'})

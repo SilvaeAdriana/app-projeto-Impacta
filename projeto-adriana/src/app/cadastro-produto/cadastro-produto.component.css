@@ -10,12 +10,17 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    
+
 }
 
 label {
     font-size: 20px;
     margin-bottom: 5px;
+}
+
+select {
+  height: 30px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -43,7 +48,7 @@ textarea {
     flex-direction: column;
     width: 500px;
     background-color: white;
-    border-radius: 20px;      
+    border-radius: 20px;
 }
 
 #content-cadastro-produto {

@@ -11,7 +11,17 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    
+
+}
+
+#reservado {
+  margin-top: 10px;
+  text-align: center;
+  color: red
+}
+
+#reservar button {
+  width: 300px;
 }
 
 input {
@@ -20,9 +30,10 @@ input {
     margin-bottom: 20px
 }
 
-button {
+#content-button button {
     width: 150px;
     height: 40px;
+    margin-right: 5px;
 }
 
 #usuario {
@@ -43,7 +54,7 @@ button {
     height: 500px;
     width: 500px;
     background-color: white;
-    border-radius: 20px;      
+    border-radius: 20px;
 }
 
 .atributo-produto {

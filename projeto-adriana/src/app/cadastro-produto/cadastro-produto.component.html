@@ -6,9 +6,13 @@
                 <label for="nome">Nome: </label>
                 <input [(ngModel)]='produto.nome' name="nome"/>
                 <label for="usuario">Categoria: </label>
-                <input [(ngModel)]='produto.categoria' name="categoria"/>
+                <select name="categoria" id="categoria" (change)='selecionarCategoria($event)'>
+                  <option value="Utensílio doméstico">Utensílio doméstico</option>
+                  <option value="Roupas">Roupas</option>
+                  <option value="Livros">Livros</option>
+              </select>
                 <label for="resumo">Resumo: </label>
-                <textarea 
+                <textarea
                 [(ngModel)]='produto.resumo'
                 name="resumo"
                 placeholder="Digite aqui um resumo sobre o seu produto!"
@@ -21,6 +25,6 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
 

@@ -5,5 +5,6 @@ export class Produto {
     public resumo: string;
     public usuario_id: number;
     public usuario: string;
+    public reservado: boolean
     public tipo_usuario: string;
 }

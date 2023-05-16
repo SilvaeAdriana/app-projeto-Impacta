@@ -5,11 +5,15 @@ const router = Router();
 
 router.get('/', ProdutoController.getAllProdutos);
 
+router.get('/produto-reservado/:id', ProdutoController.getProdutosReservados);
+
 router.get('/:id', ProdutoController.getProdutosById);
 
-router.get('/nome/:nome', ProdutoController.getProdutosByNome);
+router.get('/categoria/:categoria', ProdutoController.getProdutosByCategoria);
 
 router.post('/', ProdutoController.postProdutos);
+
+router.post('/produto-reservado', ProdutoController.reservarProduto);
 
 router.delete('/:id', ProdutoController.deleteProduto);
 

@@ -4,8 +4,8 @@
         <input
             name="pesquisa"
             placeholder="Busque algum produto aqui =D"
-            [(ngModel)]='nomeProduto'
-            (keyup)='findByNomeProduto()'/>
+            [(ngModel)]='categoriaProduto'
+            (keyup)='findByCategoriaProduto()'/>
         <div id="card-produto">
             <div id="content-produto">
                 <div id="area-produto">
@@ -30,11 +30,21 @@
                         <b>Tipo do usuário: </b>
                         {{ produto.tipo_usuario }}
                     </div>
+                    <div id="reservar" *ngIf="produto.reservado == false">
+                      <hr/>
+                      <button (click)="reservar(produto.id, produto.usuario_id)">Reservar</button>
+                    </div>
+                    <div id="reservado" *ngIf="produto.reservado == true">
+                      <hr/>
+                     <b> Produto já reservado</b>
+                    </div>
                     </div>
 
                 </div>
                 <div id="content-button">
                     <button routerLink="/login">Sair</button>
+                    <button (click)="getAllProdutos()">Todos os produtos</button>
+                    <button (click)="getProdutosReservados()">Produtos reservados</button>
                     <button routerLink="/cadastro-produto">Add Produto</button>
                 </div>
 

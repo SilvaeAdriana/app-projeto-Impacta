@@ -13,7 +13,16 @@ CREATE TABLE IF NOT EXISTS produtos (
     nome VARCHAR(255) not null,
     categoria VARCHAR(255) not null,
     resumo VARCHAR(255),
+    reservado boolean,
     usuario_id integer not null,
     FOREIGN KEY(usuario_id) REFERENCES usuarios(id)
+);
+
+CREATE TABLE IF NOT EXISTS produtos_reservados (
+    id serial primary key,
+    usuario_id integer not null,
+    produto_id integer not null,
+    FOREIGN KEY(usuario_id) REFERENCES usuarios(id),
+    FOREIGN KEY(produto_id) REFERENCES produtos(id)
 )
 

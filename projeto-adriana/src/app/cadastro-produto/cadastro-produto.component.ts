@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment.prod';
 export class CadastroProdutoComponent {
   produto: Produto = new Produto()
   listaProdutos: Produto[]
+  tipoCategoria: string = 'Utensílio doméstico'
 
   constructor(
     private router: Router,
@@ -27,16 +28,25 @@ export class CadastroProdutoComponent {
     console.log(this.listaProdutos.length)
   }
 
-  cadastrar() {
-    this.produto.usuario_id = environment.id
+  selecionarCategoria(event: any){
+    this.tipoCategoria = event.target.value
+    console.log(this.tipoCategoria)
+  }
 
-    this.produtoService.cadastrar(this.produto).subscribe((resp: Produto)=>{
+  cadastrar() {
+    if(environment.id === 0) {
+      alert('Usuário não está logado');
+    } else {
+      this.produto.usuario_id = environment.id
+      this.produto.categoria = this.tipoCategoria
+      this.produtoService.cadastrar(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
       this.router.navigate(['/feed-produtos'])
       alert('Postagem realizada com sucesso!')
 
 
   })
+    }
 }
 
 }
